@@ -1,0 +1,64 @@
+version: '3.8'  # Docker Compose file format version
+
+services:
+  # ------------------------------
+  # PostgreSQL Database with pgVector
+  # ------------------------------
+  postgres:
+    image: ankane/pgvector:latest     # Official pgvector image (Postgres + pgvector extension)
+    container_name: postgres          # Name of the Postgres container
+    restart: always                   # Restart automatically if container stops
+    environment:
+      POSTGRES_USER: myuser           # PostgreSQL username
+      POSTGRES_PASSWORD: mypassword   # PostgreSQL password
+      POSTGRES_DB: mydb               # Default database name
+    ports:
+      - "5432:5432"                   # Map host port 5432 → container port 5432 (PostgreSQL default)
+    volumes:
+      - pg_data:/var/lib/postgresql/data  # Persistent volume for PostgreSQL data
+
+  # ------------------------------
+  # pgAdmin Web UI for PostgreSQL
+  # ------------------------------
+  pgadmin:
+    image: dpage/pgadmin4:latest      # Use the official pgAdmin 4 image
+    container_name: pgadmin           # Name of the pgAdmin container
+    restart: always                   # Restart automatically if container stops
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com  # Default login email for pgAdmin
+      PGADMIN_DEFAULT_PASSWORD: admin         # Default password for pgAdmin
+    ports:
+      - "5050:80"                     # Map host port 5050 → container port 80 (HTTP)
+    depends_on:
+      - postgres                      # Ensure Postgres starts before pgAdmin
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin  # Store pgAdmin config persistently
+
+# ------------------------------
+# Named Volumes
+# ------------------------------
+volumes:
+  pg_data:                             # Persistent storage for PostgreSQL data
+  pgadmin_data:                        # Persistent storage for pgAdmin config
+
+# ------------------------------
+# Usage Commands
+# ------------------------------
+# ▶ To Start:
+# docker compose -f pgvector.yml up -d
+#
+# ▶ To Stop:
+# docker compose -f pgvector.yml down
+#
+# ▶ To Stop & Delete Data:
+# docker compose -f pgvector.yml down -v
+#
+# ------------------------------
+# Access Info:
+# 🧩 Postgres: localhost:5432
+# 🧩 pgAdmin:  http://localhost:5050
+# Login to pgAdmin → Add New Server:
+#   Name: local
+#   Host: postgres
+#   Username: myuser
+#   Password: mypassword

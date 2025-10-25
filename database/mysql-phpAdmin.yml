@@ -1,0 +1,59 @@
+version: '3.8'  # Docker Compose file format version
+
+services:
+  # ------------------------------
+  # MySQL Database Service
+  # ------------------------------
+  mysql:
+    image: mysql:8.0                # Use the official MySQL 8.0 image
+    container_name: mysql           # Name of the MySQL container
+    restart: always                 # Restart automatically if container stops
+    environment:
+      MYSQL_ROOT_PASSWORD: root          # Root user password for MySQL
+      MYSQL_DATABASE: mydb               # Database to create on startup
+      MYSQL_USER: myuser                 # Non-root user to create
+      MYSQL_PASSWORD: mypassword         # Password for non-root user
+    ports:
+      - "3306:3306"                # Map host port 3306 → container port 3306 (MySQL default)
+    volumes:
+      - mysql_data:/var/lib/mysql  # Mount persistent volume to store database files
+
+  # ------------------------------
+  # phpMyAdmin Web UI for MySQL
+  # ------------------------------
+  phpmyadmin:
+    image: phpmyadmin:latest       # Use the latest phpMyAdmin image
+    container_name: phpmyadmin     # Name of the phpMyAdmin container
+    restart: always                # Restart automatically if container stops
+    environment:
+      PMA_HOST: mysql              # Tell phpMyAdmin which host (container) to connect to
+      PMA_USER: root               # Default login username for phpMyAdmin
+      PMA_PASSWORD: rootpassword   # Password for that user
+    ports:
+      - "8080:80"                  # Map host port 8080 → container port 80 (HTTP)
+    depends_on:
+      - mysql                      # Start phpMyAdmin only after MySQL is ready
+
+# ------------------------------
+# Named Volume Declaration
+# ------------------------------
+volumes:
+  mysql_data:                      # This named volume stores MySQL data persistently
+
+
+
+# To Run
+# docker compose up -d
+
+# To Stop
+# docker compose down
+
+# To Stop & Delete Data
+# docker compose down -v
+
+# How It Works
+# MySQL container runs the actual database.
+# phpMyAdmin container gives you a browser-based GUI.
+# Volume mysql_data keeps your database files safe even if the containers stop or restart.
+# Access the GUI at 👉 http://localhost:8080
+# MySQL listens on 👉 http://localhost:3306

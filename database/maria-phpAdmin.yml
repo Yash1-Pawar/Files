@@ -1,0 +1,51 @@
+version: '3.8'  # Docker Compose file format version
+
+services:
+  # ------------------------------
+  # MariaDB Database Service
+  # ------------------------------
+  mariadb:
+    image: mariadb:latest           # Use the official MariaDB image
+    container_name: mariadb         # Name of the MariaDB container
+    restart: always                 # Automatically restart if container stops
+    environment:
+      MARIADB_ROOT_PASSWORD: rootpassword  # Root user password
+      MARIADB_DATABASE: mydb               # Database to create on startup
+      MARIADB_USER: myuser                 # Non-root user name
+      MARIADB_PASSWORD: mypassword         # Password for non-root user
+    ports:
+      - "3307:3306"                 # Map host port 3307 → container port 3306 (MariaDB)
+    volumes:
+      - mariadb_data:/var/lib/mysql # Persist database data so it's not lost on restart
+
+  # ------------------------------
+  # phpMyAdmin Web UI for MariaDB
+  # ------------------------------
+  phpmyadmin:
+    image: phpmyadmin:latest        # Use the official phpMyAdmin image
+    container_name: phpmyadmin_maria
+    restart: always                 # Restart automatically if container stops
+    environment:
+      PMA_HOST: mariadb             # Connect phpMyAdmin to the "mariadb" service
+      PMA_USER: root                # Default login user
+      PMA_PASSWORD: rootpassword    # Password for that user
+    ports:
+      - "8081:80"                   # Map host port 8081 → container port 80 (HTTP)
+    depends_on:
+      - mariadb                     # Ensure phpMyAdmin starts after MariaDB
+
+# ------------------------------
+# Named Volume Declaration
+# ------------------------------
+volumes:
+  mariadb_data:                     # Named volume to persist MariaDB data
+
+
+# To Run
+# docker compose up -d
+
+# To Stop
+# docker compose down
+
+# To Stop & Delete Data
+# docker compose down -v
