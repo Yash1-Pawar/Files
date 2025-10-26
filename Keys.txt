@@ -1,0 +1,7 @@
+**OPEN_AI API KEY**
+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
+
+
+**WEATHER API KEY**
+https://api.weatherapi.com
+90cd847ef0c14399b0473522252610
