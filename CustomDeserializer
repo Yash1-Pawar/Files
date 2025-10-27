@@ -1,0 +1,66 @@
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.util.List;
+
+public class Response {
+    private String name;
+    private int id;
+
+    @JsonDeserialize(using = FormListDeserializer.class)
+    private List<Form> forms;
+
+    // getters/setters
+}
+
+
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class Form {
+    private int id;
+
+    @JsonProperty("field-name")
+    private String fieldName;
+
+    private String answer;
+
+    // getters/setters
+}
+
+
+
+
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonDeserializer;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class FormListDeserializer extends JsonDeserializer<List<Form>> {
+
+    @Override
+    public List<Form> deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
+        List<Form> filteredForms = new ArrayList<>();
+        ObjectMapper mapper = (ObjectMapper) p.getCodec();
+        JsonNode node = mapper.readTree(p);
+
+        if (node.isArray()) {
+            for (JsonNode formNode : node) {
+                JsonNode fieldNameNode = formNode.get("field-name");
+                if (fieldNameNode != null && "abc".equalsIgnoreCase(fieldNameNode.asText())) {
+                    Form form = mapper.treeToValue(formNode, Form.class);
+                    filteredForms.add(form);
+                }
+            }
+        }
+
+        return filteredForms;
+    }
+}
+
+
+
+
