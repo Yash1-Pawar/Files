@@ -1,0 +1,56 @@
+Here are 5 sample goals for you as a Java Developer at HSBC, with the fields Name, Description, and Measure/Target — suitable for your performance cycle:
+
+⸻
+
+1. Goal Name: Microservices Enhancement & Delivery
+
+Description:
+Design, develop, and deploy new and enhanced microservices for core banking applications using Java Spring Boot, following HSBC coding and security standards.
+Measure/Target:
+	•	Deliver assigned features by agreed sprint deadlines with <5% defect leakage in UAT.
+	•	Maintain >90% adherence to coding and security guidelines.
+
+⸻
+
+2. Goal Name: Code Quality & Maintainability
+
+Description:
+Improve the overall code quality by implementing best practices, refactoring legacy components, and increasing test coverage across services.
+Measure/Target:
+	•	Achieve at least 85% unit test coverage.
+	•	Zero high-severity SonarQube issues.
+	•	Reduce code review comments by 20% over the year.
+
+⸻
+
+3. Goal Name: DevOps & Deployment Efficiency
+
+Description:
+Collaborate with the DevOps team to ensure seamless CI/CD pipelines for microservice deployments on Kubernetes.
+Measure/Target:
+	•	Zero deployment failures due to code/config issues.
+	•	Successfully deploy all assigned releases within timeline.
+
+⸻
+
+4. Goal Name: Learning & Skill Development
+
+Description:
+Enhance technical expertise by learning new frameworks, cloud platforms, or tools relevant to HSBC’s tech stack (e.g., AWS, Kafka, or Docker).
+Measure/Target:
+	•	Complete at least 2 internal/external technical trainings.
+	•	Apply learnings in at least one project deliverable.
+
+⸻
+
+5. Goal Name: Collaboration & Stakeholder Communication
+
+Description:
+Work effectively with cross-functional teams, including QA, Business Analysts, and Product Owners, ensuring clarity and timely delivery of tasks.
+Measure/Target:
+	•	Maintain >95% on-time task updates in Jira.
+	•	Positive feedback from at least 2 project stakeholders during review cycle.
+
+⸻
+
+Would you like me to format these in a table format (for direct copy to HSBC Workday/MyCareer system)?
