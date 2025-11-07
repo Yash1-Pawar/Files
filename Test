@@ -127,5 +127,54 @@ Measure/Target:
 
 ⸻
 
-Would you like me to combine all 12 goals in a clean table (Name | Description | Measure/Target) so you can paste it directly into your HSBC performance system (MyCareer or Workday)?
-Would you like me to format these in a table format (for direct copy to HSBC Workday/MyCareer system)?
+
+
+
+Perfect 👏 — those are strong, concrete achievements that show technical depth, ownership, and collaboration.
+
+Here’s your refined self-assessment summary (professionally worded for HSBC’s Workday/MyCareer system) — incorporating all your actual work and aligning with HSBC’s performance framework and values:
+
+⸻
+
+Self-Assessment Summary
+
+Over the past year, I have successfully delivered key initiatives across multiple interfaces and microservices while ensuring stability, quality, and timely delivery. My focus remained on building scalable solutions, automating manual processes, and maintaining HSBC’s engineering and InfoSec standards.
+
+Key Achievements:
+	•	Delivered and maintained the Malta interface with zero production incidents, ensuring smooth and stable integration throughout the year.
+	•	Automated SIM migration code execution, which was earlier performed manually through Postman runner — improving efficiency, accuracy, and deployment speed.
+	•	Supported multiple go-live waves with successful SIM loads and timely resolution of pre- and post-deployment issues.
+	•	Mentored new joiners through structured knowledge transfer (KT) sessions, ensuring faster onboarding and better understanding of interface flows.
+	•	Enhanced system design by removing duplicate code across multiple interfaces and consolidating common logic into a shared microservice — improving maintainability and reducing code complexity.
+	•	Delivered all enhancements, requirements, and bug fixes on time with zero major rollback or quality issues.
+
+Learning & Growth:
+	•	Strengthened knowledge in microservices architecture, automation, and CI/CD processes.
+	•	Improved understanding of end-to-end integration flows and deployment pipelines.
+	•	Gained experience in mentoring and collaborative delivery across multiple modules.
+
+Areas for Improvement:
+	•	Plan to focus more on proactive performance tuning and improving interface-level monitoring.
+	•	Will aim to contribute further in solution design discussions and cross-team architectural improvements.
+
+Values & Behaviours:
+Throughout the year, I demonstrated HSBC’s values of Integrity, Collaboration, and Excellence by taking ownership of deliverables, ensuring transparency in communication, and supporting the team through collaboration and mentoring. I remained committed to continuous improvement, knowledge sharing, and delivering quality outcomes aligned with business goals.
+
+⸻
+
+Here’s a concise version (within typical MyCareer text box limits, ~5–6 lines):
+
+⸻
+
+Delivered the Malta interface with zero incidents and automated SIM migration code, eliminating manual Postman runs. Supported multiple go-live waves with SIM loads and ensured all enhancements, bug fixes, and requirements were delivered on time. Consolidated duplicate interface logic into a shared microservice, improving maintainability. Mentored new joiners through KT sessions and consistently demonstrated HSBC values of ownership, collaboration, and excellence.
+
+⸻
+
+Would you like me to make it slightly more formal and review-ready (for final submission tone)?
+
+
+
+Would you like me to make it a shorter version (around 5–6 lines) that fits neatly into HSBC’s MyCareer text box limit too?
+
+
+
