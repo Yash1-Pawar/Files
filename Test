@@ -53,4 +53,79 @@ Measure/Target:
 
 ⸻
 
+Got it 👍 Since you work on multiple interfaces (integrations, APIs, and cross-system microservices), here are 7 more goals tailored for your role at HSBC — including the same structure (Name, Description, Measure/Target).
+
+⸻
+
+6. Goal Name: API Integration & Cross-System Connectivity
+
+Description:
+Develop and maintain REST APIs and integrations between multiple internal/external interfaces, ensuring data consistency and performance.
+Measure/Target:
+	•	Achieve 100% uptime in integration testing.
+	•	All APIs meet performance SLAs (<500ms response time).
+
+⸻
+
+7. Goal Name: Incident Resolution & Production Support
+
+Description:
+Provide timely support for production issues related to microservices and interfaces, performing root cause analysis and permanent fixes.
+Measure/Target:
+	•	Resolve 95% of assigned incidents within SLA.
+	•	Zero repeat incidents for same root cause.
+
+⸻
+
+8. Goal Name: API Documentation & Standardization
+
+Description:
+Ensure all interface APIs are properly documented with Swagger/OpenAPI specifications and aligned to HSBC’s API governance standards.
+Measure/Target:
+	•	100% of APIs documented in Swagger Hub.
+	•	Zero non-compliant endpoints found in audits.
+
+⸻
+
+9. Goal Name: Performance Optimization
+
+Description:
+Analyze and optimize performance across services and interfaces by improving database queries, caching, and load handling.
+Measure/Target:
+	•	Reduce API latency by 20%.
+	•	Achieve 99.9% availability under load conditions.
+
+⸻
+
+10. Goal Name: Security & Compliance
+
+Description:
+Implement JWT-based authentication, input validation, and encryption standards across all interfaces to comply with HSBC’s security guidelines.
+Measure/Target:
+	•	0 security vulnerabilities in penetration testing.
+	•	100% adherence to HSBC InfoSec policy.
+
+⸻
+
+11. Goal Name: Automation & Process Improvement
+
+Description:
+Automate repetitive tasks like data validation, build, and deployment scripts to improve efficiency across interfaces.
+Measure/Target:
+	•	Reduce manual deployment time by 25%.
+	•	Successfully implement at least 2 automation improvements.
+
+⸻
+
+12. Goal Name: Knowledge Sharing & Mentoring
+
+Description:
+Share technical knowledge across the team through documentation, sessions, or onboarding support for new joiners.
+Measure/Target:
+	•	Conduct minimum 2 technical knowledge sessions.
+	•	Document at least 3 reusable implementation guides or best practices.
+
+⸻
+
+Would you like me to combine all 12 goals in a clean table (Name | Description | Measure/Target) so you can paste it directly into your HSBC performance system (MyCareer or Workday)?
 Would you like me to format these in a table format (for direct copy to HSBC Workday/MyCareer system)?
